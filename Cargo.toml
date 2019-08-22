@@ -1,21 +1,25 @@
 [package]
-name = "template-rust"
+name = "socketstat"
 version = "0.1.0"
 license = "MIT OR Apache-2.0"
 authors = ["Alec Mocatta <alec@mocatta.net>"]
 categories = []
 keywords = []
 description = """
-A template Rust library crate.
+Get socket information and statistics.
 """
-repository = "https://github.com/alecmocatta/template-rust"
-homepage = "https://github.com/alecmocatta/template-rust"
-documentation = "https://docs.rs/template-rust/0.1.0"
+repository = "https://github.com/alecmocatta/socketstat"
+homepage = "https://github.com/alecmocatta/socketstat"
+documentation = "https://docs.rs/socketstat/0.1.0"
 readme = "README.md"
 edition = "2018"
 
 [badges]
-azure-devops = { project = "alecmocatta/template-rust", pipeline = "tests" }
+azure-devops = { project = "alecmocatta/socketstat", pipeline = "tests" }
 maintenance = { status = "passively-maintained" }
 
 [dependencies]
+palaver = "0.2"
+
+[target.'cfg(unix)'.dependencies]
+nix = "0.15"
