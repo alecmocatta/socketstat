@@ -22,4 +22,4 @@ maintenance = { status = "passively-maintained" }
 palaver = "0.2"
 
 [target.'cfg(unix)'.dependencies]
-nix = "0.16"
+nix = "0.20"
